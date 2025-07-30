@@ -18,6 +18,15 @@
   }
 }
 
+
+
+/* Add this class for the grid background */
+.grid-background {
+  background-image: linear-gradient(to right, rgba(229, 231, 235, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 231, 235, 0.5) 1px, transparent 1px);
+  background-size: 40px 40px; /* You can adjust the grid size here */
+}
+
 /* Custom scrollbar styling */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -40,6 +49,94 @@
 
   .animate-text-shine {
     animation: text-shine 3s ease-in-out infinite alternate;
+  }
+
+  /* Grid texture background */
+  .grid-texture {
+    background-image: linear-gradient(
+        rgba(251, 191, 36, 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(251, 191, 36, 0.03) 1px, transparent 1px),
+      radial-gradient(
+        circle at 25% 25%,
+        rgba(251, 191, 36, 0.02) 1px,
+        transparent 1px
+      ),
+      radial-gradient(
+        circle at 75% 75%,
+        rgba(251, 191, 36, 0.02) 1px,
+        transparent 1px
+      );
+    background-size: 50px 50px, 50px 50px, 100px 100px, 100px 100px;
+  }
+
+  /* Enhanced texture with multiple layers */
+  .enhanced-texture {
+    background-image: linear-gradient(
+        rgba(251, 191, 36, 0.02) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(251, 191, 36, 0.02) 1px, transparent 1px),
+      radial-gradient(circle, rgba(251, 191, 36, 0.015) 1px, transparent 1px),
+      radial-gradient(
+        circle at 20% 80%,
+        rgba(255, 147, 36, 0.01) 2px,
+        transparent 2px
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(255, 147, 36, 0.01) 2px,
+        transparent 2px
+      );
+    background-size: 40px 40px, 40px 40px, 60px 60px, 120px 120px, 120px 120px;
+  }
+
+  /* Subtle wave texture */
+  .wave-texture {
+    background-image: linear-gradient(
+        rgba(251, 191, 36, 0.02) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(251, 191, 36, 0.02) 1px, transparent 1px),
+      radial-gradient(
+        ellipse at 50% 50%,
+        rgba(251, 191, 36, 0.01) 0%,
+        transparent 50%
+      );
+    background-size: 40px 40px, 40px 40px, 200px 200px;
+  }
+
+  /* Alternative grid texture with dots */
+  .grid-dots {
+    background-image: radial-gradient(
+      circle,
+      rgba(251, 191, 36, 0.1) 1px,
+      transparent 1px
+    );
+    background-size: 30px 30px;
+  }
+
+  /* Subtle grid overlay */
+  .grid-overlay {
+    position: relative;
+  }
+
+  .grid-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        rgba(251, 191, 36, 0.02) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(251, 191, 36, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 1;
   }
 
   @keyframes blob1 {
@@ -103,5 +200,5 @@
 }
 
 .btn-small {
-    @apply flex items-center justify-center gap-3 bg-linear-to-r from-[#FF9324] to-[#e99a4b] text-sm font-semibold text-white px-7 py-2 rounded-lg hover:bg-black hover:text-white transition-colors cursor-pointer hover:shadow-2xl hover:shadow-orange-300
+  @apply flex items-center justify-center gap-3 bg-linear-to-r from-[#FF9324] to-[#e99a4b] text-sm font-semibold text-white px-7 py-2 rounded-lg hover:bg-black hover:text-white transition-colors cursor-pointer hover:shadow-2xl hover:shadow-orange-300;
 }
